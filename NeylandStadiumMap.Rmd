@@ -1,0 +1,24 @@
+---
+title: "Coursera Data Products - Week 2 Assignment"
+date: "8/19/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## August 19th, 2018
+
+### Neyland Stadium
+#### University of Tennessee
+#### Home of the Volunteers
+
+```{r maps, echo=FALSE}
+library(leaflet)
+powerT <- makeIcon('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa0sE4WaP5SsJNV0PnzGO2EL7uPlj0U9nEZr3m-i-7oCJM08Soww', iconWidth = 40, iconHeight = 50)
+
+leaflet() %>%
+    addTiles() %>%
+    addMarkers(lat=35.9550, lng = -83.9250, icon = powerT, popup = 'Worst team in SEC')
+```
